@@ -6,6 +6,8 @@ Platform for drafting common legal agreements
 ## Running the app
 
 The whole app (frontend + backend + database) runs in a single Docker
+container. The AI chat feature needs an `OPENAI_API_KEY` in a `.env` file at
+the project root (see `.env`), which the start scripts pass into the
 container.
 
 ```

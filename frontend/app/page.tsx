@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import NdaForm from "@/components/NdaForm";
+import NdaChat from "@/components/NdaChat";
 import NdaPreview from "@/components/NdaPreview";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
 import { buildCoverPageData } from "@/lib/ndaContent";
@@ -55,8 +55,8 @@ export default function Home() {
             Mutual NDA Creator
           </h1>
           <p className="text-sm text-gray-text">
-            Fill in the details below to generate a Mutual Non-Disclosure
-            Agreement.
+            Chat with the assistant to fill in the details and generate a
+            Mutual Non-Disclosure Agreement.
           </p>
         </div>
         <div className="flex items-center gap-3 text-sm text-gray-text">
@@ -71,9 +71,9 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-8 lg:grid-cols-[320px_1fr]">
+      <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-8 lg:grid-cols-[380px_1fr]">
         <aside className="flex flex-col gap-6">
-          <NdaForm data={formData} onChange={setFormData} />
+          <NdaChat fields={formData} onFieldsChange={setFormData} />
           <DownloadPdfButton cover={cover} />
         </aside>
 
