@@ -8,6 +8,11 @@ export interface NdaFormData {
   jurisdiction: string;
 }
 
+export interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
 export interface CoverPageData {
   purpose: string;
   effectiveDate: string;
